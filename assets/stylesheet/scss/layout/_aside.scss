@@ -1,0 +1,110 @@
+@use "../abstract/colors" as *;
+@use "../abstract/mixin" as *;
+
+aside {
+  height: 70px;
+  background-color: $bg-grey;
+  width: 100%;
+  display: flex;
+
+  .aside-wrapper {
+    @include flex;
+    margin: auto;
+    padding-left: calc(max(17px, env(safe-area-inset-left)));
+    padding-right: calc(max(17px, env(safe-area-inset-right)));
+    max-width: 980px;
+    width: 100%;
+    .aside-left {
+      p {
+        font-size: 12px;
+      }
+    }
+    .aside-right {
+      .aside-container {
+        @include flex;
+        .drop {
+          border: 1px solid $grey;
+          border-radius: 4px;
+          font-size: 17px;
+          color: $white;
+          background-color: $bg-grey;
+          height: 35px;
+          width: 326px;
+          margin-right: 15px;
+          position: relative;
+
+          .aside-dropdown {
+            @include flex;
+            height: 35px;
+            padding: 0 15px;
+
+            .aside-dropdown-left {
+              span i {
+                margin-right: 10px;
+              }
+            }
+            .aside-dropdown-right {
+              i {
+                transform: rotate(90deg);
+              }
+            }
+          }
+          .dropdown-hidden {
+            display: none;
+            border-left: 1px solid $grey;
+            border-right: 1px solid $grey;
+            border-bottom: 1px solid $grey;
+
+            border-radius: 0px 0px 4px 4px;
+            font-size: 17px;
+            color: $white;
+            background-color: $bg-grey;
+            height: 35px;
+            width: 100%;
+            position: absolute;
+            // display: flex;
+            align-items: center;
+            p {
+              padding-left: 40px;
+            }
+            &:focus {
+              border-color: #6bf;
+            }
+            &:hover {
+              background-color: $bg;
+            }
+          }
+          &:focus {
+            border-color: #6bf;
+          }
+          &:hover {
+            background-color: $bg;
+          }
+        }
+        .aside-btn {
+          height: 26px;
+          border-radius: 4px;
+          font-size: 17px;
+          background: linear-gradient(#42a1ec, #0070c9);
+          border: 1px solid #07c;
+          color: $white;
+          padding: 4px 15px;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          margin-right: 15px;
+
+          &:hover {
+            background: linear-gradient(#51a9ee, #147bcd);
+            border-color: #1482d0;
+          }
+        }
+        .close-icon {
+          font-size: 22px;
+          color: $light-grey;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
