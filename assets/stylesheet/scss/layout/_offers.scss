@@ -1,0 +1,27 @@
+@use "../abstract/colors" as *;
+@use "../abstract/mixin" as *;
+
+.offers {
+  background-color: $bg-offer;
+  width: 100%;
+  padding: 0.9411rem 0;
+  font-size: 12px;
+  &-container {
+    text-align: center;
+    p {
+      a {
+        color: rgb(41, 151, 255);
+        text-decoration: none;
+        font-weight: lighter;
+
+        &:hover {
+          text-decoration: underline;
+        }
+        i {
+          margin-left: 4px;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

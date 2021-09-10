@@ -1,0 +1,28 @@
+@use "../abstract/colors" as *;
+@use "../abstract/mixin" as *;
+
+.body {
+  width: 100%;
+  margin: auto;
+  max-width: 980px;
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    .head {
+      padding: 72px 0 20px;
+      text-align: center;
+      h1 {
+        font-size: 21px;
+      }
+      h2 {
+        font-size: 80px;
+        font-weight: 600;
+        margin-top: 12px;
+      }
+    }
+    .video {
+      width: 1347px;
+      height: 606px;
+    }
+  }
+}
