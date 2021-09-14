@@ -30,12 +30,14 @@ nav {
           align-items: center;
           width: 100%;
           .search-btn {
+            transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
             font-size: 18px;
             padding: 0 5px;
           }
           .search-input {
             width: 100%;
             input {
+              transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
               border: none;
               background-color: #000;
               color: $grey;

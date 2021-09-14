@@ -589,6 +589,7 @@ nav .nav-wrapper .search-container .search-upper .search-left {
   width: 100%;
 }
 nav .nav-wrapper .search-container .search-upper .search-left .search-btn {
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   font-size: 18px;
   padding: 0 5px;
 }
@@ -596,6 +597,7 @@ nav .nav-wrapper .search-container .search-upper .search-left .search-input {
   width: 100%;
 }
 nav .nav-wrapper .search-container .search-upper .search-left .search-input input {
+  transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   border: none;
   background-color: #000;
   color: #707070;
@@ -677,6 +679,8 @@ nav .nav-wrapper ul li a i {
   height: 52px;
   width: 100%;
   z-index: 9;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: saturate(180%) blur(20px);
 }
 .stickybar-container {
   display: flex;
@@ -737,6 +741,7 @@ nav .nav-wrapper ul li a i {
   width: 100%;
   padding: 0.9411rem 0;
   font-size: 12px;
+  animation: blueDrop 2s cubic-bezier(0.42, 0, 0.58, 1) 1s forwards;
 }
 .offers-container {
   text-align: center;
@@ -754,6 +759,21 @@ nav .nav-wrapper ul li a i {
   font-size: 10px;
 }
 
+@keyframes blueDrop {
+  0% {
+    margin-top: -50px;
+    opacity: 0;
+    background-color: #2997ff;
+  }
+  35% {
+    margin-top: 0px;
+    background-color: #2997ff;
+  }
+  70% {
+    margin-top: 0px;
+    background-color: #2997ff;
+  }
+}
 .body {
   width: 100%;
   margin: auto;
@@ -763,23 +783,105 @@ nav .nav-wrapper ul li a i {
   display: flex;
   flex-direction: column;
 }
-.body-wrapper .head {
+.body-wrapper .head-wrapper {
+  position: relative;
+}
+.body-wrapper .head-wrapper .head {
   padding: 72px 0 20px;
   text-align: center;
 }
-.body-wrapper .head h1 {
+.body-wrapper .head-wrapper .head h1 {
   font-size: 21px;
 }
-.body-wrapper .head h2 {
+.body-wrapper .head-wrapper .head h2 {
   font-size: 80px;
   font-weight: 600;
   margin-top: 12px;
+}
+.body-wrapper .head-wrapper .grad {
+  position: absolute;
+  top: 5px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  animation: grad 6s ease-in;
 }
 .body-wrapper .video {
   width: 1347px;
   height: 606px;
 }
 
+@keyframes grad {
+  0% {
+    background: linear-gradient(270deg, #000 80%, transparent 100%);
+  }
+  70% {
+    background: linear-gradient(270deg, #000 80%, transparent 100%);
+  }
+  80% {
+    background: linear-gradient(270deg, #000 75%, transparent 100%);
+  }
+  81% {
+    background: linear-gradient(270deg, #000 70%, transparent 100%);
+  }
+  82% {
+    background: linear-gradient(270deg, #000 65%, transparent 100%);
+  }
+  83% {
+    background: linear-gradient(270deg, #000 60%, transparent 100%);
+  }
+  84% {
+    background: linear-gradient(270deg, #000 55%, transparent 100%);
+  }
+  85% {
+    background: linear-gradient(270deg, #000 50%, transparent 100%);
+  }
+  86% {
+    background: linear-gradient(270deg, #000 45%, transparent 100%);
+  }
+  87% {
+    background: linear-gradient(270deg, #000 40%, transparent 100%);
+  }
+  88% {
+    background: linear-gradient(270deg, #000 35%, transparent 100%);
+  }
+  89% {
+    background: linear-gradient(270deg, #000 30%, transparent 100%);
+  }
+  90% {
+    background: linear-gradient(270deg, #000 25%, transparent 100%);
+  }
+  91% {
+    background: linear-gradient(270deg, #000 25%, transparent 90%);
+  }
+  92% {
+    background: linear-gradient(270deg, #000 25%, transparent 80%);
+  }
+  93% {
+    background: linear-gradient(270deg, #000 25%, transparent 70%);
+  }
+  94% {
+    background: linear-gradient(270deg, #000 25%, transparent 60%);
+  }
+  95% {
+    background: linear-gradient(270deg, #000 25%, transparent 50%);
+  }
+  96% {
+    background: linear-gradient(270deg, #000 25%, transparent 40%);
+  }
+  97% {
+    background: linear-gradient(270deg, #000 25%, transparent 30%);
+  }
+  98% {
+    background: linear-gradient(270deg, #000 25%, transparent 20%);
+  }
+  99% {
+    background: linear-gradient(270deg, #000 25%, transparent 10%);
+  }
+  100% {
+    background: linear-gradient(270deg, #000 25%, transparent 0%);
+  }
+}
 .hover-element {
   height: 100px;
   background-color: #f9f9fa;

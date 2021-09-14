@@ -8,21 +8,104 @@
   &-wrapper {
     display: flex;
     flex-direction: column;
-    .head {
-      padding: 72px 0 20px;
-      text-align: center;
-      h1 {
-        font-size: 21px;
+    .head-wrapper {
+      position: relative;
+
+      .head {
+        padding: 72px 0 20px;
+        text-align: center;
+        h1 {
+          font-size: 21px;
+        }
+        h2 {
+          font-size: 80px;
+          font-weight: 600;
+          margin-top: 12px;
+        }
       }
-      h2 {
-        font-size: 80px;
-        font-weight: 600;
-        margin-top: 12px;
+      .grad {
+        position: absolute;
+        top: 5px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        animation: grad 6s ease-in;
       }
     }
     .video {
       width: 1347px;
       height: 606px;
     }
+  }
+}
+@keyframes grad {
+  0% {
+    background: linear-gradient(270deg, #000 80%, transparent 100%);
+  }
+  70% {
+    background: linear-gradient(270deg, #000 80%, transparent 100%);
+  }
+  80% {
+    background: linear-gradient(270deg, #000 75%, transparent 100%);
+  }
+  81% {
+    background: linear-gradient(270deg, #000 70%, transparent 100%);
+  }
+  82% {
+    background: linear-gradient(270deg, #000 65%, transparent 100%);
+  }
+  83% {
+    background: linear-gradient(270deg, #000 60%, transparent 100%);
+  }
+  84% {
+    background: linear-gradient(270deg, #000 55%, transparent 100%);
+  }
+  85% {
+    background: linear-gradient(270deg, #000 50%, transparent 100%);
+  }
+  86% {
+    background: linear-gradient(270deg, #000 45%, transparent 100%);
+  }
+  87% {
+    background: linear-gradient(270deg, #000 40%, transparent 100%);
+  }
+  88% {
+    background: linear-gradient(270deg, #000 35%, transparent 100%);
+  }
+  89% {
+    background: linear-gradient(270deg, #000 30%, transparent 100%);
+  }
+  90% {
+    background: linear-gradient(270deg, #000 25%, transparent 100%);
+  }
+  91% {
+    background: linear-gradient(270deg, #000 25%, transparent 90%);
+  }
+  92% {
+    background: linear-gradient(270deg, #000 25%, transparent 80%);
+  }
+  93% {
+    background: linear-gradient(270deg, #000 25%, transparent 70%);
+  }
+  94% {
+    background: linear-gradient(270deg, #000 25%, transparent 60%);
+  }
+  95% {
+    background: linear-gradient(270deg, #000 25%, transparent 50%);
+  }
+  96% {
+    background: linear-gradient(270deg, #000 25%, transparent 40%);
+  }
+  97% {
+    background: linear-gradient(270deg, #000 25%, transparent 30%);
+  }
+  98% {
+    background: linear-gradient(270deg, #000 25%, transparent 20%);
+  }
+  99% {
+    background: linear-gradient(270deg, #000 25%, transparent 10%);
+  }
+  100% {
+    background: linear-gradient(270deg, #000 25%, transparent 0%);
   }
 }
