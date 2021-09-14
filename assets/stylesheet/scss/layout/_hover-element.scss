@@ -1,0 +1,39 @@
+@use "../abstract/colors" as *;
+@use "../abstract/mixin" as *;
+
+.hover-element {
+  height: 100px;
+  background-color: #f9f9fa;
+  padding: 8px;
+  display: none;
+  .hover-list {
+    max-width: 980px;
+    width: 100%;
+    margin: auto;
+    @include flex;
+    .hover-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
+        width: 52px;
+        height: 54px;
+        margin-bottom: 5px;
+      }
+      span {
+        font-size: 12px;
+        color: #8d8d8f;
+        &:hover {
+          color: #06c;
+        }
+      }
+      &:hover {
+        color: #06c;
+        cursor: pointer;
+      }
+    }
+  }
+}
+// .hover-mac:hover .hover-element {
+//   display: flex;
+// }
