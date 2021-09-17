@@ -1,5 +1,5 @@
 # Apple-clone
-Creating a clone apple UI using vanilla HTML, CSS, SCSS and JavaScript with no framework
+Creating a Clone of Apple UI using vanilla HTML, CSS, SCSS and JavaScript with no framework
 ## [Click here to see live demo]( https://98arun.github.io/apple-clone/)
 ## Snapshot:-
 ![Snapshot_apple](https://user-images.githubusercontent.com/82587103/133835454-0228cfe4-2ee0-4cb2-899b-8cca35db2ec7.png)
