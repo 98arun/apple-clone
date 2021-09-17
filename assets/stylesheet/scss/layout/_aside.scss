@@ -48,6 +48,13 @@ aside {
                 transform: rotate(90deg);
               }
             }
+            &:focus {
+              border: 1px solid #6bf;
+              border-radius: 4px;
+            }
+            &:hover {
+              background-color: $bg;
+            }
           }
           .dropdown-hidden {
             display: none;
@@ -75,10 +82,8 @@ aside {
             }
           }
           &:focus {
-            border-color: #6bf;
-          }
-          &:hover {
-            background-color: $bg;
+            border: 2px solid #6bf;
+            border-radius: 4px;
           }
         }
         .aside-btn {

@@ -1,0 +1,62 @@
+@use "../abstract/colors" as *;
+@use "../abstract/mixin" as *;
+
+.bag-container {
+  @include flexbox;
+  justify-content: flex-start;
+  position: absolute;
+  right: 330px;
+  z-index: 99;
+  width: 286px;
+  height: 322px;
+  background-color: $white;
+  font-size: 14px;
+  font-weight: 400;
+  border: 1px solid #d2d2d7;
+  border-radius: 18px;
+
+  .bag-content {
+    padding: 0 20px;
+    width: 85%;
+    p {
+      color: #6e6e73;
+      padding: 35px 0 23px;
+      text-align: center;
+    }
+    .links {
+      display: flex;
+      flex-direction: column;
+      margin: 10px 0;
+
+      a {
+        border-top: 1px solid #d2d2d7;
+        height: 44px;
+        color: #06c;
+        cursor: pointer;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        img {
+          width: 23px;
+          height: 23px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}
+.arrow {
+  background-color: $white;
+  border: 1px solid #d2d2d7;
+  border-radius: 2px 0 0;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 465px;
+  top: 112px;
+  z-index: 98;
+}
+#bag {
+  display: none;
+}

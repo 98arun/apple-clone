@@ -5,6 +5,9 @@
 @use "./layout/offers";
 @use "./layout/body";
 @use "./layout/hover-element";
+@use "./layout/ar-container";
+@use "./layout/footer";
+@use "./components/bag";
 
 body {
   background-color: #000;

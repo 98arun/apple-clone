@@ -1,0 +1,103 @@
+@use "../abstract/colors" as *;
+@use "../abstract/mixin" as *;
+
+.footer-container {
+  width: 100%;
+  background-color: #111;
+  @include flexbox;
+
+  &-list {
+    max-width: 980px;
+    margin: auto;
+    width: 100%;
+    margin-top: 50px;
+    @include flex;
+    align-items: flex-start;
+    .list-item {
+      color: rgba(255, 255, 255, 0.459);
+      font-size: 12.5px;
+      line-height: 2;
+      ul {
+        li {
+          list-style-type: none;
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+            color: $white;
+          }
+        }
+        .list-title {
+          font-size: 13px;
+          font-weight: 600;
+          color: white;
+          &:hover {
+            text-decoration: none;
+            cursor: initial;
+          }
+        }
+      }
+      .sub-list {
+        margin-top: 10px;
+      }
+    }
+  }
+  .footer-para {
+    width: 980px;
+    margin-top: 30px;
+    border-bottom: 0.5px solid #a1a1a663;
+
+    p {
+      color: rgba(255, 255, 255, 0.267);
+      font-weight: lighter;
+      font-size: 12px;
+      margin-bottom: 10px;
+
+      span {
+        color: #2997ff;
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .copyrights-container {
+    @include flex;
+    margin: 15px 0 30px;
+    max-width: 980px;
+    width: 100%;
+
+    .copyrights {
+      display: flex;
+      flex-direction: row;
+      p {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.267);
+      }
+      ul {
+        margin-left: 30px;
+        display: flex;
+        list-style-type: none;
+        font-size: 12px;
+        li {
+          color: rgba(255, 255, 255, 0.507);
+          margin: 0 5px;
+          &:hover {
+            text-decoration: underline;
+            color: $white;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .state {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.507);
+      &:hover {
+        text-decoration: underline;
+        color: $white;
+        cursor: pointer;
+      }
+    }
+  }
+}

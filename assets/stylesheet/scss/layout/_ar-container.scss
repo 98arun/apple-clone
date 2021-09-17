@@ -1,0 +1,82 @@
+@use "../abstract/colors" as *;
+@use "../abstract/mixin" as *;
+
+.ar-container {
+  width: 100%;
+  background-color: $black;
+  @include flexbox;
+  position: relative;
+  margin-top: 150px;
+
+  .ar-title {
+    font-size: 80px;
+    max-width: 980px;
+    margin: auto;
+    h3 {
+      font-size: 75px;
+      color: #6e6e73;
+    }
+
+    h4 {
+      color: white;
+      margin-bottom: 10px;
+    }
+  }
+  .ar-video {
+    width: 100%;
+
+    video {
+      width: 100%;
+      z-index: 1;
+    }
+  }
+  .ar-content {
+    max-width: 980px;
+    margin: auto;
+    @include flexbox;
+
+    .video-description {
+      font-size: 21px;
+      text-align: center;
+      color: #a1a1a6;
+      margin: 150px;
+    }
+    .more {
+      font-size: 32px;
+      line-height: 1.125;
+      text-align: center;
+      font-weight: 600;
+      color: $white;
+      padding-bottom: 30px;
+      background: linear-gradient(45deg, #036182, #5eb3ca);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .line {
+      margin-bottom: 30px;
+      border-bottom: 2px solid #036182;
+    }
+
+    .btn-find {
+      width: 133px;
+      height: 36px;
+      background-color: $black;
+      color: $white;
+      font-weight: 500;
+      border: 1.5px solid #036182;
+      border-radius: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin-bottom: 150px;
+      cursor: pointer;
+      transition: all 0.3s ease-in;
+      &:hover {
+        background-color: $white;
+        color: $black;
+        border: 1.5px solid #036182;
+      }
+    }
+  }
+}

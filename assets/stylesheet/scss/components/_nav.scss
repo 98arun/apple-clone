@@ -19,6 +19,7 @@ nav {
       margin: auto;
       z-index: 20;
       display: none;
+
       .search-upper {
         @include flex;
         height: 44px;
@@ -30,14 +31,19 @@ nav {
           align-items: center;
           width: 100%;
           .search-btn {
-            transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+            animation: slide 1s ease-in-out 1 forwards;
+            opacity: 0;
+
             font-size: 18px;
             padding: 0 5px;
           }
           .search-input {
+            animation: slide 1s ease-in-out 1 forwards;
+            opacity: 0;
+            animation-delay: 0.5s;
+
             width: 100%;
             input {
-              transition: opacity 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
               border: none;
               background-color: #000;
               color: $grey;
@@ -48,6 +54,7 @@ nav {
         }
         .search-right {
           font-size: 18px;
+          z-index: 11;
           &:hover {
             cursor: pointer;
           }
@@ -112,5 +119,15 @@ nav {
         }
       }
     }
+  }
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(382px);
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
   }
 }

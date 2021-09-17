@@ -8,11 +8,11 @@
     <meta name="google-site-verification" content="OceiiuZKFSp04gHzyDgJc-TnxbJHsXIueki4mbTrUNI" />
     <link rel="stylesheet" href="./assets/stylesheet/css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="icon" href="./assets/images/apple_logo.png">
+    <link rel="icon" href="./assets/images/favicon.ico">
     <title>iPhone 12 Pro and iPhone 12 Pro Max - Apple</title>
 </head>
 
-<body>
+<body onload="animate()">
     <aside>
         <div class="aside-wrapper">
             <div class="aside-left">
@@ -30,7 +30,7 @@
                                 <i id="rotate" class="fas fa-chevron-right"></i>
                             </div>
                         </div>
-                        <div class="dropdown-hidden hide">
+                        <div class="dropdown-hidden ">
                             <p>Other country or region</p>
                         </div>
 
@@ -49,13 +49,14 @@
                 <li><a href="/">Store </a></li>
                 <li><a class="hover-mac" href="/">Mac</a></li>
                 <li><a class="hover-ipad" href="/">iPad</a></li>
-                <li><a class="hover-iphone" href="/">iPhone</a></li>
+                <li><a class="hover-iphone" onclick="" href="/">iPhone</a></li>
                 <li><a class="hover-watch" href="/">Watch</a></li>
                 <li><a class="hover-tv" href="/">TV</a></li>
                 <li><a class="hover-music" href="/">Music</a></li>
                 <li><a href="#">Support</a></li>
                 <li><a id="search" href="/"><i class="fas fa-search"></i></a></li>
-                <li><a href="/"><img src="./assets/images/cart.svg" alt=""></a></li>
+                <li id="bag-icon"><a href="/"><img src="./assets/images/cart.svg" alt=""></a>
+                </li>
             </ul>
             <div class="search-container">
                 <div class="search-upper">
@@ -80,6 +81,26 @@
                         <a href="/">Airpods</a>
                         <a href="/">AirTag</a>
 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="bag">
+            <span class="arrow"></span>
+            <div class="bag-container">
+                <div class="bag-content">
+                    <p>Your Bag is empty</p>
+                    <div class="links">
+                        <a href="/">
+                            <img src="./assets/images/bag.svg" alt=""> Bag</a>
+                        <a href="/">
+                            <img src="./assets/images/favorites.svg" alt=""> Favorites</a>
+                        <a href="/">
+                            <img src="./assets/images/orders.svg" alt=""> Orders</a>
+                        <a href="/">
+                            <img src="./assets/images/account.svg" alt="">Account</a>
+                        <a href="/">
+                            <img src="./assets/images/signIn.svg" alt=""> Sign In</a>
                     </div>
                 </div>
             </div>
@@ -340,7 +361,7 @@
     <section class="body">
         <div class="body-wrapper">
             <div class="head-wrapper">
-                <div class="head">
+                <div class="head" id="main">
                     <h1>
                         iPhone 12 Pro and iPhone 12 Pro Max
                     </h1>
@@ -353,8 +374,172 @@
                 <video src="./assets/images/large.mp4" muted autoplay="1" playsinline></video>
             </div>
         </div>
+        <div class="body-para">
+            <p>5G goes Pro. A14 Bionic rockets past every other smartphone chip. The Pro camera system takes low-light
+                photography to
+                the next level — with an even bigger jump on iPhone 12 Pro Max. And Ceramic Shield delivers four times
+                better drop
+                performance. Let’s see what this thing can do.</p>
+            <a href="/"><span>Watch the film<i class="far fa-play-circle"></i></span></a>
+        </div>
+
     </section>
+    <section class="ar-container">
+        <div class="ar-title">
+            <h3>LiDAR Scanner</h3>
+            <h4>AR at the speed <br> of light.</h4>
+        </div>
+        <div class="ar-video">
+            <video src="./assets/images/ar-video.mp4" type="video/mp4" playsinline autoplay muted loop></video>
+        </div>
+        <div class="ar-content">
+            <h3 class="video-description">The LiDAR Scanner on iPhone 12 Pro measures how long it takes light to reflect
+                back from
+                objects, so it can create a depth map of any space you’re in. Because it’s ultrafast and accurate, AR
+                apps
+                can
+                now transform a room into a realistic rainforest or show you exactly how a new sneaker will fit.</h3>
+            <h2 class="more line">NASA is developing LiDAR technology <br> for Mars missions</h2>
+            <h2 class="more">A depth map in nanoseconds</h2>
+            <div class="btn-find">
+                Find out how
+            </div>
+        </div>
+    </section>
+    <footer class="footer-container">
+        <div class="footer-container-list">
+            <div class="list-item">
+                <ul>
+                    <li class="list-title">Shop and Learn</li>
+                    <li>Mac</li>
+                    <li>iPad</li>
+                    <li>iPhone</li>
+                    <li>Watch</li>
+                    <li>TV</li>
+                    <li>Music</li>
+                    <li>Airpods</li>
+                    <li>HomePod</li>
+                    <li>iPod touch</li>
+                    <li>AirTag</li>
+                    <li>Accessories</li>
+                    <li>Gift Cards</li>
+                </ul>
+            </div>
+
+            <div class="list-item">
+                <ul>
+                    <li class="list-title">Services</li>
+                    <li>Apple Music</li>
+                    <li>Apple TV+</li>
+                    <li>Apple Fitness+</li>
+                    <li>Apple News+</li>
+                    <li>Apple Arcade</li>
+                    <li>iCloud</li>
+                    <li>Apple One</li>
+                    <li>Apple Card</li>
+                    <li>Apple Books</li>
+                    <li>Apple Podcasts</li>
+                    <li>App Store </li>
+                </ul>
+                <ul class="sub-list">
+                    <li class="list-title">Account</li>
+                    <li>Manage your Apple ID</li>
+                    <li>Apple Store Account</li>
+                    <li>iCloud.com</li>
+                </ul>
+            </div>
+
+            <div class="list-item">
+                <ul>
+                    <li class="list-title">Apple Store</li>
+                    <li>Find a Store</li>
+                    <li>Shop Online</li>
+                    <li>Genius Bar</li>
+                    <li>Today at Apple</li>
+                    <li>Apple Camp</li>
+                    <li>Apple Store App</li>
+                    <li>Refurbished and Clearance</li>
+                    <li>Financing</li>
+                    <li>Apple Trade In</li>
+                    <li>Order Status</li>
+                    <li>Shopping Help</li>
+                </ul>
+            </div>
+
+            <div class="list-item">
+                <ul>
+                    <li class="list-title">For Business</li>
+                    <li>Apple and Business</li>
+                    <li>Shop for Business</li>
+                </ul>
+                <ul class="sub-list">
+                    <li class="list-title">For Education</li>
+                    <li>Apple and Education</li>
+                    <li>Shop for K-12</li>
+                    <li>Shop for College</li>
+                </ul>
+                <ul class="sub-list">
+                    <li class="list-title">For Healthcare</li>
+                    <li>Apple in Healthcare</li>
+                    <li>Health on Apple Watch</li>
+                    <li>Health Records on iPhone</li>
+                </ul>
+                <ul class="sub-list">
+                    <li class="list-title">For Government</li>
+                    <li>Shop for Government</li>
+                    <li>Shop for Veterans and Military</li>
+                </ul>
+            </div>
+
+            <div class="list-item">
+                <ul>
+                    <li class="list-title">Apple Values</li>
+                    <li>Accessibility</li>
+                    <li>Education</li>
+                    <li>Environment</li>
+                    <li>Inclusion and Diversity</li>
+                    <li>Privacy</li>
+                    <li>Racial Equity and Justice</li>
+                    <li>Supplier Responsibility</li>
+                </ul>
+                <ul class="sub-list">
+                    <li class="list-title">About Apple</li>
+                    <li>Newsroom</li>
+                    <li>Apple Leadership</li>
+                    <li>Career Opportunities</li>
+                    <li>Investors</li>
+                    <li>Ethics & Compliance</li>
+                    <li>Events</li>
+                    <li>Contact Apple</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-para">
+            <p>More ways to shop: <span>Find an Apple Store</span> or <span>other retailer</span> near you. Or call
+                1-800-MY-APPLE.</p>
+        </div>
+
+
+        <div class="copyrights-container">
+            <div class="copyrights">
+                <p>Copyright © 2021 Apple Inc. All rights reserved.</p>
+                <ul>
+                    <li>Privacy Policy &nbsp;|</li>
+                    <li> Terms of Use &nbsp;|</li>
+                    <li> Sales and Refunds &nbsp;|</li>
+                    <li> Legal &nbsp;|</li>
+                    <li> Site Map &nbsp;|</li>
+                </ul>
+            </div>
+            <div class="state">
+                United States
+            </div>
+        </div>
+    </footer>
 </body>
-<script src="./assets/js/index.js"></script>
+<script src="./assets/js/index.js">
+
+</script>
 
 </html>
